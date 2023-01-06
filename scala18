@@ -1,0 +1,30 @@
+object string{
+    def main(args : Array[String])
+    {
+        val strings = new Array[String](5)
+        var i : Int = 0
+        println("Enter 5 Strings")
+        for(i<-0 to 4)
+        {
+            strings(i) = scala.io.StdIn.readLine()
+        }
+        println("Strings in given array are = ")
+        for(i<-0 to 4)
+        {
+            println(strings(i))
+        }
+        println("Enter new String to search it found in given array string or not")
+        val newString = scala.io.StdIn.readLine()
+        for(i<-0 to 4)
+        {
+            if(strings(i).contains(newString))
+            {
+               println("newString is found in given array"+newString) 
+            }
+            else
+            {
+                println("newString is not found in given array")
+            }
+        }
+    }
+}

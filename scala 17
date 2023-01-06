@@ -1,0 +1,48 @@
+;;import scala.io.StdIn._
+abstract class Shape
+{
+  def volume()
+  def display()
+  var v : Double = 0.0
+}
+class cube extends Shape
+{
+  def volume()
+  {
+     println("Enter the value of a=")
+     val a=readDouble()
+     v=a*a*a
+  }
+  def display()
+  {
+     println("volume of cube="+v)
+  }
+}
+class cylinder extends Shape
+{
+ 
+  def volume()
+  {
+     println("Enter the radius and height=")
+     val r=readDouble()
+     val h=readDouble()
+     v=3.14*r*r*h
+  }
+  def display()
+  {
+     println("volume of cylinder="+v)
+  }
+}
+object shape
+{
+   def main(args:Array[String])
+   {
+      var ob1=new cube()
+      ob1.volume()
+      ob1.display()
+      
+      var ob2=new cylinder()
+      ob2.volume()
+      ob2.display()
+   }
+}
